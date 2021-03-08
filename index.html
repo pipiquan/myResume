@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="./css/iview.css">
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/iview.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="./css/iview.css">
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
+	</head>
+	<body>
+		<div id="main_body">
+			<Row type="flex" class-name="title_level_1" justify="center">
+				<i-col span="6">个人简历</i-col>
+			</Row>
+			<br>
+			<Row>
+				<i-col span="24">
+					<Row class-name="title_line_box">
+						<i-col span="4" class-name="title_level_2">基本资料</i-col>
+						<i-col span="20">
+							<div class="div_line"></div>
+						</i-col>
+					</Row>
+				</i-col>
+				<i-col span="24">
+					<Row>
+						<i-col class-name="title_level_3" span="4">姓名</i-col>
+						<i-col class-name="content_normal" span="6" offset="2">{{name}}</i-col>
+						<i-col class-name="title_level_3" span="4">性别</i-col>
+						<i-col class-name="content_normal" span="6" offset="2">{{sex}}</i-col>
+						<i-col class-name="title_level_3" span="4">出生年月</i-col>
+						<i-col class-name="content_normal" span="6" offset="2">{{birthday}}</i-col>
+						<i-col class-name="title_level_3" span="4">学历</i-col>
+						<i-col class-name="content_normal" span="6" offset="2">{{degree}}</i-col>
+						<i-col class-name="title_level_3" span="4">电话</i-col>
+						<i-col class-name="content_normal" span="6" offset="2">{{telephone}}</i-col>
+						<i-col class-name="title_level_3" span="4">邮箱</i-col>
+						<i-col class-name="content_normal" span="6" offset="2">{{email}}</i-col>
+					</Row>
+				</i-col>
+				<i-col span="24">
+					<Row class-name="title_line_box">
+						<i-col span="4" class-name="title_level_2">教育背景</i-col>
+						<i-col span="20">
+							<div class="div_line"></div>
+						</i-col>
+					</Row>
+				</i-col>
+				<i-col span="24">
+					<Row v-for="exprience in educationExperience">
+						<i-col span="3" offset="1">{{exprience.period}}</i-col>
+						<i-col span="12">{{exprience.school}}</i-col>
+						<i-col span="4" offset="4">{{exprience.professional}}</i-col>
+					</Row>
+				</i-col>
+				<i-col span="24">
+					<Row class-name="title_line_box">
+						<i-col span="4" class-name="title_level_2">工作经历</i-col>
+						<i-col span="20">
+							<div class="div_line"></div>
+						</i-col>
+					</Row>
+				</i-col>
+				<i-col span="24">
+					<Row v-for="exprience in WorkExperience">
+						<i-col span="3" offset="1">{{exprience.period}}</i-col>
+						<i-col span="12">{{exprience.company}}</i-col>
+						<i-col span="4" offset="4">{{exprience.position}}</i-col>
+					</Row>
+				</i-col>
+				<i-col span="24">
+					<Row class-name="title_line_box">
+						<i-col span="4" class-name="title_level_2">项目经验</i-col>
+						<i-col span="20">
+							<div class="div_line"></div>
+						</i-col>
+					</Row>
+				</i-col>
+				<i-col span="24">
+					<i-menu mode="horizontal" theme="light" :active-name="objExprience[0].name" width="80px" @on-select="changeObj">
+						<Menu-item :name="obj.name" v-for="obj in objExprience">{{obj.name}}</Menu-item>
+					</i-menu>
+				</i-col>
+			</Row>
+		</div>
+	</body>
+	<script src="./js/main.js"></script>
+</html>

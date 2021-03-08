@@ -1,0 +1,62 @@
+body{
+	background-color: #F8F8F9;
+}
+
+#main_body {
+	margin: 20px calc(50% - 400px) 0;
+	width: 800px;
+	height: 802px;
+	border: #dcdee2 2px solid;
+	padding: 20px;
+	background-color: #f8f8f9;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.title_level_1 {
+	font-size: 36px;
+	color: #FCFDFF;
+	text-align: justify;
+	text-align-last: justify;
+	background-color: #5A9AD7;
+	border-style: double;
+	border-width: 6px;
+}
+
+.title_level_2 {
+	background-color: #5a9bd1;
+	color: #fff9fa;
+	text-align: justify;
+	text-align-last: justify;
+	padding: 4px 8px;
+	font-size: 16px;
+}
+
+.title_level_3 {
+	font-size: 14px;
+	color: #464c5b;
+	text-align: justify;
+	text-align-last: justify;
+}
+
+.content_normal {
+	color: #657180;
+	font-size: 14px;
+}
+
+.title_line_box {
+	height: 32px;
+	margin: 12px 0;
+}
+
+.div_line {
+	height: 2px;
+	background-color: #6099cf;
+	margin: 14px 0 14px 14px;
+}
+
+/* 复写iviewcss */
+.ivu-menu-light {
+	background-color: #F8F8F900
+}
