@@ -4,13 +4,14 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<link rel="stylesheet" href="./css/iview.css">
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
 		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="./js/iview.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" href="./css/iview.css">
 		<link rel="stylesheet" type="text/css" href="./css/index.css">
 	</head>
 	<body>
-		<div id="main_body">
+		<div id="main_body" v-cloak>
 			<Row type="flex" class-name="title_level_1" justify="center">
 				<i-col span="6">个人简历</i-col>
 			</Row>
@@ -82,6 +83,25 @@
 					<i-menu mode="horizontal" theme="light" :active-name="objExprience[0].name" width="80px" @on-select="changeObj">
 						<Menu-item :name="obj.name" v-for="obj in objExprience">{{obj.name}}</Menu-item>
 					</i-menu>
+					<Row class-name="project_box">
+						<i-col span="4">项目名称：</i-col>
+						<i-col span="20">{{project.name}}</i-col>
+						<i-col span="4">技术：</i-col>
+						<i-col span="20">{{project.skill}}</i-col>
+						<i-col span="4">主要职责：</i-col>
+						<i-col span="20">{{project.detail}}</i-col>
+					</Row>
+				</i-col>
+				<i-col span="24">
+					<Row class-name="title_line_box">
+						<i-col span="4" class-name="title_level_2">个人评价</i-col>
+						<i-col span="20">
+							<div class="div_line"></div>
+						</i-col>
+					</Row>
+				</i-col>
+				<i-col span="24">
+					<p class="indent_20">{{personalEvaluation}}</p>
 				</i-col>
 			</Row>
 		</div>
